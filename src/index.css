@@ -193,6 +193,38 @@ nav {
 
 
 /* Main */
+
+.banner {
+  width: 100%;
+  background-color: var(--slideback);
+  height: 25em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner h1 {
+  color: var(--text);
+  font-size: 10rem;
+  font-family: 'Knewave', cursive;
+  font-style: italic;
+  clear: both;
+  display: inline-block;
+  white-space: nowrap;
+  animation: ani 20s linear infinite;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 main {
   margin-top: 6em;
 }
@@ -219,7 +251,15 @@ main {
   margin: 1em 0;
   color: var(--text);
   padding: .5em;
-  border-radius: 5px;
+  border-radius: 20px;
+  background: var(--btn);
+  border: 1px solid var(--para);
+  color: var(--text);
+  cursor: pointer;
+}
+.filter button:hover {
+  background: var(--cate);
+  color: var(--lightpink);
 }
 .filter-product {
   max-width: 1100px;
@@ -379,18 +419,22 @@ main {
   font-size: 1.2rem;
 }
 
+
+/* =======question reviews========= */
 .questions .reviews{
   display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  padding: 4em 0;
+  justify-content: space-between;
+  padding: 3em 0;
   border-top: 1px solid rgb(221, 216, 216);
 }
 
 .questions .reviews button{
-  width: 20px;
-  float: left;
+  padding: .5em;
+  border: 0;
+  border-radius:5px;
+  background: var(--feedback);
+  color: var(--text);
+  cursor: pointer;
 }
 .questions p {
   width: 600px;
@@ -403,6 +447,10 @@ main {
   color: var(--text);
   font-size: 1.8rem;
   font-weight: 600;
+}
+
+.push {
+  /* awc */
 }
 /* ************Footer********** */
 .footer-inside {
@@ -474,35 +522,137 @@ main {
 
 
 
-.banner {
-  width: 100%;
-  background-color: var(--slideback);
-  height: 25em;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
-}
-
-.banner h1 {
-  color: var(--text);
-  font-size: 10rem;
-  font-family: 'Knewave',cursive;
-  font-style: italic;
-  clear: both;
-  display: inline-block;
-  white-space: nowrap;
-  animation: ani 20s linear infinite;
-}
-
-@keyframes ani {
-  0% {
-    transform: translateX(100%);
+@media (max-width: 1000px) {
+   .banner {
+     height: 10em;
+   }
+   .banner h1 {
+     font-size: 5rem;
+   }
+  .filter-product {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0 auto;
   }
-  100% {
-    transform: translateX(-100%);
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .numbers {
+    flex-wrap: wrap;
   }
 }
+
+
 
 /* ======Mobile======== */
 
+@media (max-width: 600px) {
+  .nav-inside .logo {
+    padding: 0 8.5em;
+  }
+  .nav-inside ul {
+    display: none;
+  }
+  .banner {
+    height: 6em;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
+  .filter {
+  flex-direction: row;
+  align-items: center;
+}
+.filter button{
+  margin-right: .5em;
+}
+.filter-product {
+  width: 90vw;
+  max-width: 500px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+}
+
+.products {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.products img {
+  width: 130px;
+  height: 230px;
+}
+.name-price .name,
+.name-price .price,
+.name-price .cate {
+  font-size: .9rem;
+}
+
+.info-reviews {
+  width: 95vw;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.numbers {
+  flex-direction: column;
+}
+.num-review {
+  margin-bottom: 3em;
+}
+.num-review h1 {
+  font-size: 1.8rem;
+}
+.num-review p {
+  font-size: .9rem;
+  width: 280px;
+}
+.signup h1 {
+  font-size: 1.8rem;
+}
+.signup p {
+  font-size: 1rem;
+}
+.signup input {
+  height: 30px;
+  width: 200px;
+}
+.signup button {
+  padding: .5em;
+  margin: 1em;
+}
+.faqs h1 {
+  font-size: 1.8rem;
+}
+.faqs p {
+  font-size: .9rem;
+  margin-bottom: 3em;
+}
+.reviews h3 {
+  font-size: 1.3rem;
+}
+.questions p {
+  width: 280px;
+  font-size: .95rem;
+}
+.footer-inside {
+  grid-template-columns: 1fr;
+}
+.good input {
+  width: 280px;
+  height: 30px;
+}
+.good p {
+  font-size: .9rem;
+}
+
+.good button{
+  margin: 1em 0;
+  padding: .5em;
+  font-size: .9rem;
+} 
+.good span {
+  font-size: .9rem;
+}
+.options {
+  flex-direction: column;
+}
+}

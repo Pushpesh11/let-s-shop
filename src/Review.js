@@ -23,7 +23,7 @@ export default function Review() {
                     </div>
                 </div>
             
-                <h2>Read about the <a href="">story of Good Garms</a></h2>
+                <h2>Read about the <a href="">story of Good</a></h2>
 
                 <div className="signup">
                     <h1>Get the goods</h1>
